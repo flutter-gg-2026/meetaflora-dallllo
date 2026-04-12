@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/deb97c8d-233e-4f48-9aac-1fc2d5364919
+
 # 🌿 Meet A Flora
 
 A Flutter app that identifies plants using AI and shows dynamic plant details.
@@ -84,6 +88,8 @@ Create a `.env` file in the root of the project:
 ## screenshots
 
 https://github.com/user-attachments/assets/cabb3460-8613-40a3-be82-06c70008ffa3
+
+https://github.com/user-attachments/assets/9924dcac-8672-49b0-a3e1-883561cc6356
 
 
 
