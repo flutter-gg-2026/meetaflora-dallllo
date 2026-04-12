@@ -23,7 +23,6 @@ class DetailsCubit extends Cubit<DetailsState> {
 }
   @override
   Future<void> close() {
-    //here is when close cubit
     return super.close();
   }
 }

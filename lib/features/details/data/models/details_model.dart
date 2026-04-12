@@ -13,9 +13,6 @@ abstract class DetailsModel with _$DetailsModel {
 
   factory DetailsModel.fromJson(Map<String, Object?> json) => _$DetailsModelFromJson(json);
 }
-
-
-
 extension DetailsModelMapper on DetailsModel {
   DetailsEntity toEntity() {
     return DetailsEntity(name: name, description: description);

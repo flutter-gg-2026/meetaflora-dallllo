@@ -1,6 +1,5 @@
 import 'package:injectable/injectable.dart';
 import 'package:plants_app/features/details/data/models/details_model.dart';
-// import 'package:plants_app/core/errors/network_exceptions.dart';
 
 
 abstract class BaseDetailsRemoteDataSource {
@@ -9,10 +8,6 @@ abstract class BaseDetailsRemoteDataSource {
 
 @LazySingleton(as: BaseDetailsRemoteDataSource)
 class DetailsRemoteDataSource implements BaseDetailsRemoteDataSource {
-
-  // final SupabaseClient _supabase;
-  // final LocalKeysService _localKeysService;
-  //  DetailsRemoteDataSource(this._localKeysService, this._supabase);
     @override
   Future<DetailsModel> getDetails(String name) async {
     try {

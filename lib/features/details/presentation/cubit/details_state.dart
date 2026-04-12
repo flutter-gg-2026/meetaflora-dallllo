@@ -8,7 +8,9 @@ abstract class DetailsState extends Equatable {
   List<Object?> get props => [];
 }
 
-class DetailsInitialState extends DetailsState {}
+class DetailsInitialState extends DetailsState {
+
+}
 
 class DetailsSuccessState extends DetailsState {
   final DetailsEntity data;

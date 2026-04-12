@@ -11,12 +11,6 @@ class HomeIdentifyPlantUseCase {
   final HomeRepositoryDomain _repositoryData;
 
   HomeIdentifyPlantUseCase(this._repositoryData);
-
-  
-
-  //  Future<Result<HomeEntity, Failure>> getHome() async {
-  //   return _repositoryData.getHome();
-  // }
    Future<Either<Failure, HomeEntity>> getHomeIdentifyPlant(String path) {
     return _repositoryData.identifyPlant(path);
   }

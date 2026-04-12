@@ -1,10 +1,5 @@
 part of 'home_bloc.dart';
 
-// @freezed
-// class HomeState with _$HomeState {
-//   const factory HomeState.initial() = _Initial;
-// }
-
 abstract class HomeState {}
 
 class InitialHomeState extends HomeState {}
@@ -24,3 +19,9 @@ class ErrorHomeState extends HomeState {
   final Failure failure;
   ErrorHomeState(this.failure);
 }
+
+class HomeStateImageSelected extends HomeState {
+  List<String> selectedImages = [];
+  HomeStateImageSelected({this.selectedImages = const []});
+}
+

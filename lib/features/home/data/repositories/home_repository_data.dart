@@ -17,7 +17,6 @@ class HomeRepositoryData implements HomeRepositoryDomain{
   HomeRepositoryData(this.remoteDataSource);
 
 @override
-//.......تعديلاتي 
   Future<Either<Failure, HomeEntity>> identifyPlant(String path) async {
     try {
       final response = await remoteDataSource.getHomeIdentify(path);
@@ -32,18 +31,9 @@ class HomeRepositoryData implements HomeRepositoryDomain{
     try {
       final result = await remoteDataSource.getDetails(name);
       return Right(result.toEntity());
-    } catch (_) {
-      return Left(NetworkFailure());
-    }
+    } catch (error) {
+  return Left(FailureExceptions.getException(error));
+}
   }
 
 }
-
-//   extension DetailsModelMapper on DetailsModel {
-//   DetailsEntity toEntity() {
-//     return DetailsEntity(
-//       name: name,
-//       description: description,
-//     );
-//   }
-// }

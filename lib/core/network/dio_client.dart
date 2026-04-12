@@ -10,8 +10,8 @@ class DioClient {
     _dio = Dio(
       BaseOptions(
         baseUrl: ApiEndpoints.baseUrl,
-        connectTimeout: const Duration(seconds: 30),
-        receiveTimeout: const Duration(seconds: 30),
+        connectTimeout: const Duration(seconds: 60),
+        receiveTimeout: const Duration(seconds: 60),
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
@@ -22,19 +22,13 @@ class DioClient {
     _dio.interceptors.add(
       InterceptorsWrapper(
         onRequest: (options, handler) {
-          // Add token here
-          // options.headers['Authorization'] = 'Bearer $token';
-
-          //.......تعديلاتي 
-        // print("REQUEST: ${options.path}");
+          
           return handler.next(options);
         },
         onResponse: (response, handler) {
           return handler.next(response);
         },
         onError: (error, handler) {
-          //.......تعديلاتي
-          // print("ERROR: ${error.message}");
           return handler.next(error);
         },
       ),
